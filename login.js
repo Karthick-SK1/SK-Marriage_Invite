@@ -9,7 +9,7 @@ function login() {
 
   if (username === expectedUsername && password === expectedPassword) {
     // The user logged in successfully.
-    alert("Hello Azhagi !!!!");
+    alert("!!!! Karthick & Shahina Welcomes You !!!!");
     window.location.href = "indexx.html"; // redirect to blog page
   } else {
     // The user did not log in successfully.
