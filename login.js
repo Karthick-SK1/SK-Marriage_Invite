@@ -13,7 +13,7 @@ function login() {
     window.location.href = "main.html"; // redirect to blog page
   } else {
     // The user did not log in successfully.
-    alert("Nee Yaaru di Mairu...Veliya Podi !!!!");
+    alert("Incorrect Username or Password!");
   }
 }
 
