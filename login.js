@@ -10,10 +10,10 @@ function login() {
   if (username === expectedUsername && password === expectedPassword) {
     // The user logged in successfully.
     alert("Hello Azhagi !!!!");
-    window.location.href = "index (2).html"; // redirect to blog page
+    window.location.href = "indexx.html"; // redirect to blog page
   } else {
     // The user did not log in successfully.
-    alert("Incorrect Username or Password!");
+    alert("Sorry !!! You are not allowed in our privacy");
   }
 }
 
