@@ -31,8 +31,8 @@
             </div>
         </div>
         <div class="right">
-            <h5 style="font-size: 2rem;">Login</h5>
-            <p style="font-size: 1.25rem; font-weight: bold;">NOTE: <a href="#"></a> Only Invited people can login here</p>
+            <h5 style="font-size: 1.5rem;">Login</h5>
+            <!-- <p style="font-size: 1.5rem; font-weight: normal;">NOTE: <a href="#"></a> Only Invited people can login here</p> -->
             <div class="inputs">
                 <input type="text" id="username" placeholder="User name">
                 <br>
@@ -66,9 +66,12 @@
               if (username === expectedUsername && password === expectedPassword) {
                 loginMessage.textContent = "!!!! Karthick & Shahina Welcomes You !!!!";
                 loginMessage.style.color = "green";
-                window.location.href = "indexx.html";
+                setTimeout(function() {
+                  window.location.href = "indexx.html"; // Delayed page redirection
+                }, 5000); // 2000ms delay (2 seconds)
               } else {
                 loginMessage.textContent = "Sorry !!! You are not allowed in our privacy";
+                loginMessage.style.fontSize = "0.7rem";
                 loginMessage.style.color = "red";
               }
             }
