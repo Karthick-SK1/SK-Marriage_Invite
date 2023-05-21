@@ -1,83 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>SK - Login Page</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>SK - Login Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Added styles for the blurred background */
+    .blurred-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+      backdrop-filter: blur(5px); /* Adjust the blur amount as needed */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .loading-gif {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="box-form">
-        <div class="left">
-            <div class="overlay">
-                <h1 style="font-size: 2rem;">SK</h1>
-                <p style="font-size: 1.5rem;">"I love her and this is the beginning of everything." - Karthick</p>
-                <span>
-                    <!-- <p style="font-size: 1.25rem;">login with social media</p>
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Login with Twitter</a> -->
-                </span>
-            </div>
-        </div>
-        <div class="right">
-            <h5 style="font-size: 1.5rem;">Login</h5>
-            <!-- <p style="font-size: 1.5rem; font-weight: normal;">NOTE: <a href="#"></a> Only Invited people can login here</p> -->
-            <div class="inputs">
-                <input type="text" id="username" placeholder="User name">
-                <br>
-                <input type="password" id="password" placeholder="Password">
-            </div>
-            <br><br>
-            <div class="remember-me--forget-password">
-                <label>
-                  <input type="checkbox" name="item" checked>
-                  <span class="text-checkbox">Remember me</span>
-                </label>
-                <p class="forget-password-text">Forgot password?</p>
-              </div>              
-            <br>
-            <button id="login-btn" style="font-size: 1.5rem;">Login</button>
-            <p id="login-message" style="font-size: 1rem;"></p> <!-- Updated login message font size -->
-        </div>
-        <div id="loading" class="loading"></div>
-        <script src="login.js"></script>
-        <script>
-            function login(event) {
-              event.preventDefault(); // Prevent the default form submission behavior
-              var username = document.querySelector("#username").value;
-              var password = document.querySelector("#password").value;
-
-              var expectedUsername = "Shahi";
-              var expectedPassword = "papa";
-
-              var loginMessage = document.querySelector("#login-message"); // Get the login message element
-
-              if (username === expectedUsername && password === expectedPassword) {
-                loginMessage.textContent = "!!!! Karthick & Shahina Welcomes You !!!!";
-                loginMessage.style.color = "green";
-                setTimeout(function() {
-                  window.location.href = "indexx.html"; // Delayed page redirection
-                }, 5000); // 2000ms delay (2 seconds)
-              } else {
-                loginMessage.textContent = "Sorry !!! You are not allowed in our privacy";
-                loginMessage.style.fontSize = "0.7rem";
-                loginMessage.style.color = "red";
-              }
-            }
-
-            document.querySelector("#login-btn").addEventListener("click", login);
-        </script>
+  <div class="box-form">
+    <div class="left">
+      <div class="overlay">
+        <h1 style="font-size: 2rem;">SK</h1>
+        <p style="font-size: 1.5rem;">"I love her and this is the beginning of everything." - Karthick</p>
+        <span>
+          <!-- <p style="font-size: 1.25rem;">login with social media</p>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Login with Twitter</a> -->
+        </span>
+      </div>
     </div>
+    <div class="right">
+      <h5 style="font-size: 1.5rem;">Login</h5>
+      <!-- <p style="font-size: 1.5rem; font-weight: normal;">NOTE: <a href="#"></a> Only Invited people can login here</p> -->
+      <div class="inputs">
+        <input type="text" id="username" placeholder="User name">
+        <br>
+        <input type="password" id="password" placeholder="Password">
+      </div>
+      <br><br>
+      <div class="remember-me--forget-password">
+        <label>
+          <input type="checkbox" name="item" checked>
+          <span class="text-checkbox">Remember me</span>
+        </label>
+        <p class="forget-password-text">Forgot password?</p>
+      </div>
+      <br>
+      <button id="login-btn" style="font-size: 1.5rem;">Login</button>
+      <p id="login-message" style="font-size: 1rem;"></p> <!-- Updated login message font size -->
+    </div>
+    <div id="loading" class="loading"></div>
+    <script src="login.js"></script>
+    <script>
+      function login(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+        var username = document.querySelector("#username").value;
+        var password = document.querySelector("#password").value;
+
+        var expectedUsername = "Shahi";
+        var expectedPassword = "papa";
+
+        var loginMessage = document.querySelector("#login-message"); // Get the login message element
+        var blurredBackground = document.createElement('div');
+        blurredBackground.classList.add('blurred-background');
+        var loadingGif = document.createElement('img');
+        loadingGif.src = "output-onlinegiftools.gif"; // Replace with the direct URL of the GIF
+        loadingGif.classList.add('loading-gif');
+        blurredBackground.appendChild(loadingGif);
+
+        if (username === expectedUsername && password === expectedPassword) {
+          loginMessage.textContent = "!!!! Karthick & Shahina Welcomes You !!!!";
+          loginMessage.style.color = "green";
+          setTimeout(function () {
+            window.location.href = "indexx.html"; // Delayed page redirection
+          }, 1000); // 2000ms delay (2 seconds)
+          document.body.appendChild(blurredBackground); // Add the blurred background with loading GIF
+        } else {
+          loginMessage.textContent = "Sorry !!! You are not allowed in our privacy";
+          loginMessage.style.fontSize = "0.7rem";
+          loginMessage.style.color = "red";
+        }
+      }
+
+      document.querySelector("#login-btn").addEventListener("click", login);
+    </script>
+  </div>
 </body>
+
 </html>
