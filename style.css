@@ -1,3 +1,4 @@
+/* Default styles for both desktop and mobile */
 body {
   display: flex;
   align-items: center;
@@ -16,26 +17,14 @@ body {
 .box-form {
   margin: 0 auto;
   width: 80%; /* or any desired value */
+  max-width: 400px; /* Add this line to limit the maximum width on mobile devices */
   background: #FFFFFF;
   border-radius: 100px;
   overflow: hidden;
   display: flex;
-  flex: 1 1 100%;
-  align-items: safe;
-  justify-content: space-around;
+  flex-direction: column; /* Update to column direction for mobile devices */
+  align-items: center; /* Update to center alignment */
   box-shadow: 0 0 20px 6px #090b6f85;
-}
-
-@media (max-width: 980px) {
-  .box-form {
-    flex-flow: wrap;
-    text-align: center;
-    align-content: center;
-    align-items: center;
-    width: 100%; /* Adjust width for mobile devices */
-    border-radius: 0; /* Remove border-radius for mobile devices */
-    box-shadow: none; /* Remove box-shadow for mobile devices */
-  }
 }
 
 .box-form .left {
@@ -43,7 +32,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("201791110-rabbit-couple-with-heart-shape-light-background-valentines-day-concept-generative-ai.webp");
-  overflow: hidden;
+  /* Remove the overflow property */
 }
 
 .box-form .left .overlay {
@@ -81,15 +70,8 @@ body {
 }
 
 .box-form .right {
-  padding: 40px;
-  overflow: hidden;
-}
-
-@media (max-width: 980px) {
-  .box-form .right {
-    width: 100%;
-    padding: 20px; /* Adjust padding for mobile devices */
-  }
+  padding: 20px; /* Reduce the padding for mobile devices */
+  /* Remove the overflow property */
 }
 
 .box-form .right h5 {
@@ -109,7 +91,7 @@ body {
 .box-form .right input {
   width: 100%;
   padding: 10px;
-  margin-top: 25px;
+  margin-top: 15px; /* Reduce the margin for mobile devices */
   font-size: 16px;
   border: none;
   outline: none;
@@ -139,8 +121,8 @@ body {
 .box-form .right button {
   float: right;
   color: #fff;
-  font-size: 16px;
-  padding: 12px 35px;
+  font-size: 14px; /* Reduce the font size for mobile devices */
+  padding: 10px 25px; /* Reduce the padding for mobile devices */
   border-radius: 50px;
   display: inline-block;
   border: 0;
@@ -195,4 +177,25 @@ button:hover {
   transform: translateY(-3px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
+}
+
+/* Desktop-specific styles */
+@media (min-width: 981px) {
+  body {
+    /* Add your desktop-specific body styles here */
+  }
+
+  .box-form {
+    /* Add your desktop-specific box-form styles here */
+  }
+
+  .box-form .left {
+    /* Add your desktop-specific left styles here */
+  }
+
+  .box-form .right {
+    /* Add your desktop-specific right styles here */
+  }
+
+  /* Add more styles for other elements as needed */
 }
