@@ -16,16 +16,17 @@ body {
 
 .box-form {
   margin: 0 auto;
-  width: 100%; /* or any desired value */
-  max-width: 400px; /* Add this line to limit the maximum width on mobile devices */
+  width: 100%;
+  max-width: 600px; /* Increase the max-width to 600px */
   background: #FFFFFF;
   border-radius: 50px;
   overflow: hidden;
   display: flex;
-  flex-direction: column; /* Update to column direction for mobile devices */
-  align-items: center; /* Update to center alignment */
+  flex-direction: column;
+  align-items: center;
   box-shadow: 0 0 20px 6px #090b6f85;
 }
+
 
 .box-form .left {
   color: #FFFFFF;
