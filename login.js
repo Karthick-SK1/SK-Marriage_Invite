@@ -1,21 +1,21 @@
-function login() {
-  // Get the values of the username and password input fields.
-  var username = document.querySelector("input[type=text]").value;
-  var password = document.querySelector("input[type=password]").value;
+function login(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+  var username = document.querySelector("#username").value;
+  var password = document.querySelector("#password").value;
 
-  // Set the expected username and password values.
   var expectedUsername = "Shahi";
   var expectedPassword = "papa";
 
+  var loginMessage = document.querySelector("#login-message"); // Get the login message element
+
   if (username === expectedUsername && password === expectedPassword) {
-    // The user logged in successfully.
-    alert("!!!! Karthick & Shahina Welcomes You !!!!");
-    window.location.href = "indexx.html"; // redirect to blog page
+    loginMessage.textContent = "!!!! Karthick & Shahina Welcomes You !!!!";
+    loginMessage.style.color = "green";
+    window.location.href = "indexx.html";
   } else {
-    // The user did not log in successfully.
-    alert("Sorry !!! You are not allowed in our privacy");
+    loginMessage.textContent = "Sorry !!! You are not allowed in our privacy";
+    loginMessage.style.color = "red";
   }
 }
 
-// Add an event listener to the Login button to call the login() function when it's clicked.
-document.querySelector("button").addEventListener("click", login);
+document.querySelector("#login-btn").addEventListener("click", login);

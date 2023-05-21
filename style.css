@@ -1,4 +1,10 @@
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
   background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,9 +26,6 @@ body {
   box-shadow: 0 0 20px 6px #090b6f85;
 }
 
-
-
-
 @media (max-width: 980px) {
   .box-form {
     flex-flow: wrap;
@@ -31,16 +34,15 @@ body {
     align-items: center;
   }
 }
-.box-form div {
-  height: auto;
-}
+
 .box-form .left {
   color: #FFFFFF;
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-image: url("201791110-rabbit-couple-with-heart-shape-light-background-valentines-day-concept-generative-ai.webp");
   overflow: hidden;
 }
+
 .box-form .left .overlay {
   padding: 30px;
   width: 100%;
@@ -49,6 +51,7 @@ body {
   overflow: hidden;
   box-sizing: border-box;
 }
+
 .box-form .left .overlay h1 {
   font-size: 5vmax;
   line-height: 1;
@@ -56,43 +59,49 @@ body {
   margin-top: 40px;
   margin-bottom: 20px;
 }
-.box-form .left .overlay span p {
-  margin-top: 30px;
+
+.box-form .left .overlay p {
+  font-size: 1.5rem;
   font-weight: 900;
+  animation: quotesAnimation 3s ease-in-out infinite alternate;
 }
-.box-form .left .overlay span a {
-  background: #3b5998;
-  color: #FFFFFF;
-  margin-top: 10px;
-  padding: 14px 50px;
-  border-radius: 100px;
-  display: inline-block;
-  box-shadow: 0 3px 6px 1px #042d4657;
+
+@keyframes quotesAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.box-form .left .overlay span a:last-child {
-  background: #1dcaff;
-  margin-left: 30px;
-}
+
 .box-form .right {
   padding: 40px;
   overflow: hidden;
 }
+
 @media (max-width: 980px) {
   .box-form .right {
     width: 100%;
   }
 }
+
 .box-form .right h5 {
-  font-size: 2vmax;
+  font-size: 2rem;
   line-height: 0;
 }
+
 .box-form .right p {
-  font-size: 14px;
-  color: #B0B3B9;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
+
 .box-form .right .inputs {
   overflow: hidden;
 }
+
 .box-form .right input {
   width: 100%;
   padding: 10px;
@@ -102,18 +111,20 @@ body {
   outline: none;
   border-bottom: 2px solid #5961f9ad;
   border-radius: 5px;
-  transition: all 0.3s ease-in-out;
+  transition: border-bottom 0.3s ease-in-out;
 }
 
 .box-form .right input:focus {
   border-bottom: 2px solid #3472F7;
+  transform: translateX(5px);
+  transition: transform 0.3s ease-in-out;
 }
+
 
 .box-form .right .remember-me--forget-password {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 10px; /* Add this line and adjust the value as needed */
 }
 
 .box-form .right .remember-me--forget-password input {
@@ -121,6 +132,7 @@ body {
   margin-right: 7px;
   width: min-content;
 }
+
 .box-form .right button {
   float: right;
   color: #fff;
@@ -175,9 +187,9 @@ label span.text-checkbox {
 label input[type="checkbox"] {
   display: none;
 }
+
 button:hover {
   transform: translateY(-3px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 }
-

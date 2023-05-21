@@ -48,9 +48,33 @@
             </div>
             <br>
             <button id="login-btn" style="font-size: 1.5rem;">Login</button>
+            <p id="login-message" style="font-size: 1rem;"></p> <!-- Updated login message font size -->
         </div>
         <div id="loading" class="loading"></div>
         <script src="login.js"></script>
+        <script>
+            function login(event) {
+              event.preventDefault(); // Prevent the default form submission behavior
+              var username = document.querySelector("#username").value;
+              var password = document.querySelector("#password").value;
+
+              var expectedUsername = "Shahi";
+              var expectedPassword = "papa";
+
+              var loginMessage = document.querySelector("#login-message"); // Get the login message element
+
+              if (username === expectedUsername && password === expectedPassword) {
+                loginMessage.textContent = "!!!! Karthick & Shahina Welcomes You !!!!";
+                loginMessage.style.color = "green";
+                window.location.href = "indexx.html";
+              } else {
+                loginMessage.textContent = "Sorry !!! You are not allowed in our privacy";
+                loginMessage.style.color = "red";
+              }
+            }
+
+            document.querySelector("#login-btn").addEventListener("click", login);
+        </script>
     </div>
 </body>
 </html>
