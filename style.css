@@ -109,15 +109,20 @@ body {
 
 .box-form .right .remember-me--forget-password {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column; /* Update to vertical column layout */
+  align-items: flex-start; /* Align items to the start (left side) */
+  margin-top: 10px; /* Add margin to create space between Remember me and Forgot password */
 }
 
-.box-form .right .remember-me--forget-password input {
-  margin: 0;
-  margin-right: 7px;
-  width: min-content;
+.box-form .right .remember-me--forget-password label {
+  margin-bottom: 5px; /* Add margin at the bottom of the label */
 }
+
+.box-form .right .forget-password-text {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 
 .box-form .right button {
   float: right;
