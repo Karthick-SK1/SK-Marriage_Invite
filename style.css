@@ -17,7 +17,7 @@ body {
   margin: 0 auto;
   width: 80%; /* or any desired value */
   background: #FFFFFF;
-  border-radius: 10000000111px;
+  border-radius: 100px;
   overflow: hidden;
   display: flex;
   flex: 1 1 100%;
