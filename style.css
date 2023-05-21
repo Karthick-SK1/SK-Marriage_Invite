@@ -25,7 +25,7 @@ body {
   flex-direction: column; /* Update to column direction for mobile devices */
   align-items: center; /* Update to center alignment */
   box-shadow: 0 0 20px 6px #090b6f85;
-  transform: scale(1.30); /* Apply slight zoom effect */
+  transform: scale(1.40); /* Apply slight zoom effect */
 }
 
 .box-form .left {
