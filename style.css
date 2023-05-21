@@ -16,10 +16,10 @@ body {
 
 .box-form {
   margin: 0 auto;
-  width: 80%; /* or any desired value */
+  width: 100%; /* or any desired value */
   max-width: 400px; /* Add this line to limit the maximum width on mobile devices */
   background: #FFFFFF;
-  border-radius: 100px;
+  border-radius: 50px;
   overflow: hidden;
   display: flex;
   flex-direction: column; /* Update to column direction for mobile devices */
@@ -179,22 +179,22 @@ button:hover {
   transition: all 0.3s ease-in-out;
 }
 
-/* Desktop-specific styles */
-@media (min-width: 981px) {
+/* Mobile-specific styles */
+@media (max-width: 980px) {
   body {
-    /* Add your desktop-specific body styles here */
+    /* Add your mobile-specific body styles here */
   }
 
   .box-form {
-    /* Add your desktop-specific box-form styles here */
+    /* Add your mobile-specific box-form styles here */
   }
 
   .box-form .left {
-    /* Add your desktop-specific left styles here */
+    /* Add your mobile-specific left styles here */
   }
 
   .box-form .right {
-    /* Add your desktop-specific right styles here */
+    /* Add your mobile-specific right styles here */
   }
 
   /* Add more styles for other elements as needed */
