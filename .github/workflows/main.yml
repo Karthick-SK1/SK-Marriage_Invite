@@ -1,0 +1,19 @@
+name: HTML/CSS/JS CI
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build and Test
+      run: |
+        # Your build and test commands here
+        npm test
