@@ -3,8 +3,8 @@ function login(event) {
   var username = document.querySelector("#username").value;
   var password = document.querySelector("#password").value;
 
-  var expectedUsername = "Shahi";
-  var expectedPassword = "papa";
+  var expectedUsername = "Karthick";
+  var expectedPassword = "Shahina";
 
   var loginMessage = document.querySelector("#login-message"); // Get the login message element
   var blurredBackground = document.createElement('div');
